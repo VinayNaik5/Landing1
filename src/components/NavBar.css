@@ -1,0 +1,92 @@
+.navBar{
+    position: sticky;
+    top: 0px;
+    height: 70px;
+    background: black;
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px 0px 10px;
+    margin-bottom: -70px;
+    z-index: 5;
+
+}
+.navBar_logo{
+    color: white;
+    font-family: "MonteCarlo", sans-serif;
+    font-size: 2.5rem;
+}
+.navBar_list{
+    display: flex;
+    list-style: none;
+}
+.navBar_items{
+    white-space: nowrap;
+}
+
+.navBar_links{
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 0px 5px;
+    border: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: transparent;
+    transition: 250ms;
+}
+.navBar_links:hover{
+    border-color: white;
+    transition: 250ms;
+}
+
+.navBar_menu{
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+    .navBar_menu{
+        display: block;
+    }
+    .navBar_list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: 300px;
+        transition: all 1.5s;
+    }
+    .navBar_list--active{
+        left: 0;
+    }
+    .navBar_items{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        flex: 1;
+    }
+    .navBar_links{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        border-width: 0px;
+        background-color: black;
+        opacity: 0.75;
+    }
+    .navBar_links:hover{
+        opacity: 0.9;
+    }
+}
